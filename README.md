@@ -1,4 +1,4 @@
-#React-course-Tenzies
+## React-course-Tenzies
 
 * pouziti useState a useEfect
 * push to heroku
