@@ -3,6 +3,9 @@ import './App.css';
 import Die from "./Die"
 import {nanoid} from "nanoid"
 
+
+
+
 function App() {
  
  
@@ -43,8 +46,15 @@ const diceElements = dice.map(die => <Die key={die.id} value={die.value} isHeld=
 
  function rollDice() {
   setDice(oldDice => oldDice.map(die => {
-    return die.isHeld ? die : generateNewDie()
-  }))
+    
+    if(tenzies === true) {
+      return generateNewDie()
+    
+    }
+    else{
+      return die.isHeld ? die : generateNewDie()
+    }
+    }))
 }
 
 React.useEffect(() => {
@@ -54,13 +64,19 @@ React.useEffect(() => {
     if (allHeld && allSameValue) {
       setTenzies (true)
       console.log("winner")
+    }else {
+      setTenzies (false)
     }
 }, [dice])
+
+
+
 
  return (
     <div className="wrapper">
       
     <main>
+      {/* {tenzies &&} */}
       <h1 className="title">Tenzies</h1>
       
       <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
@@ -69,8 +85,14 @@ React.useEffect(() => {
         {diceElements}
       </div>
 
-      <button className="rollBtn" onClick={rollDice}>Roll Dice</button>
+     
 
+      <button className="rollBtn" 
+      onClick={rollDice}>
+        {tenzies ? "New Game" : "Roll"}</button>
+
+
+    
 
     </main>
 
