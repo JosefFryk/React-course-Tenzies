@@ -2,6 +2,7 @@
 body{
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .wrapper {
@@ -17,12 +18,12 @@ main {
   background-color: #F5F5F5;
   height: 400px;
   max-width: 800px;
+  min-width: 600px;
   border-radius: 5px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-
+ 
 }
 
 /* grid-template: auto auto / repeat(5, 1fr);   */
