@@ -32,4 +32,3 @@ thing to add later :
   * track pocet rollu !!
   * track cas
   * best time / roll ulozit do localStorage
-  * confetti
