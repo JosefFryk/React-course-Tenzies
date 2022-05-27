@@ -1,8 +1,8 @@
-## React-course-Tenzies
+## React-Tenzies
 
 * pouziti useState a useEfect
 * push to heroku
-* https://tendies-react.herokuapp.com/
+* https://tendies-react-two.herokuapp.com/
 
 ![image](https://user-images.githubusercontent.com/98749788/164979592-b4e6efcd-a1b6-43ae-a742-cf70c23f2c0c.png)
 
